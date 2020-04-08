@@ -67,6 +67,7 @@ a {
     padding-left: 25px;
     position: absolute;
     bottom: 10px;
+    left: 10px;
     cursor: pointer;
 }
 
@@ -154,3 +155,5 @@ footer {
     background: violet;
     float: left;
 }
+
+/* IDEA: media queryy non dimenticaree */
