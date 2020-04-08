@@ -10,7 +10,12 @@
     clear: both;
 }
 
-/* IDEA: inizio asidebar */
+a {
+    text-decoration: none;
+}
+
+
+/* ----inizio asidebar------- */
 #aside-bar {
     height: calc(100vh - 100px);
     width: 200px;
@@ -56,21 +61,20 @@
 }
 
 #menu-bottom {
-    padding-left: 15px;
+    padding-left: 25px;
     position: absolute;
     bottom: 10px;
 }
 
 #install p , #account p {
     display: inline-block;
-    padding-left: 5px;
+    padding-left: 15px;
     padding-top: 15px;
-    text-align: center;
 }
 
 #install {
     padding-bottom: 8px;
-    width: 150px;
+    width: 130px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -86,10 +90,56 @@
 main {
     height: calc(100vh - 100px);
     width: calc(100% - 200px);
-    background-color: lightblue;
     float: left;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 20px;
+    background-color: #166d3b;
+    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
 }
 
+#nav ul {
+    text-align: center;
+}
+
+#nav li {
+    display:inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#nav a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#nav a:hover::after {  /* IDEA: aggiustare hover */
+    color: white;
+    content: "";
+}
+
+.title-main {
+    font-size: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.brani img {
+    max-height: 200px;
+    max-width: 200px;
+    object-fit: contain;
+    margin-top: 15px;
+}
+
+.brani p {
+    padding-top: 10px;
+    text-align: left;
+}
+
+#perte {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* -------PLAYER------- */
 footer {
     height: 100px;
     width: 100%;
