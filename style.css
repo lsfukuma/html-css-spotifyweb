@@ -23,6 +23,7 @@ a {
     background-color: black;
     float: left;
     color: rgba(255, 255, 255, 0.6);
+    font-weight: lighter;
     position: relative;
 }
 
@@ -154,6 +155,7 @@ footer {
     height: 100px;
     width: 100%;
     background: #181818;
+    color: rgba(255, 255, 255, 0.6);
     float: left;
     display: flex;
     justify-content: space-between;
@@ -162,15 +164,30 @@ footer {
 #tape {
     width: 15%;
     height: 100%;
-    background-color: pink;
     display: flex;
     align-items: center;
     padding-left: 15px;
+    position: relative;
+}
+
+#tape p {
+    padding-left: 10px;
+}
+
+#tape p:first-of-type {
+    color: white;
+    font-size: 15px;
+}
+
+#tape p:last-of-type {
+    font-weight: lighter;
+    font-size: 13px;
 }
 
 .fa-heart{
-    order: 3;
-    justify-content: flex-end;
+    position: absolute;
+    right: 15px;
+    top: 30%;
 }
 
 #tape img {
@@ -179,13 +196,41 @@ footer {
     object-fit: contain;
 }
 
-
-
 #player {
     width: 60%;
     height: 100%;
-    background-color: yellow;
 }
+
+#player-top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#player-top i {
+    font-size: 20px;
+    padding: 30px;
+}
+
+.fa-redo-alt {
+    border-radius: 100%; /* IDEA: NON VAAAA */
+    border-color: white;
+}
+
+#ranger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-ranger {
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
 
 #volume {
     width: 20%;
