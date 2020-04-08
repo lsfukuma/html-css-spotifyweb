@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
 .clearfix {
@@ -93,13 +94,14 @@ a {
 
 /* IDEA: main */
 main {
-    height: calc(100% - 100px);
+    height: calc(100vh - 100px);
     width: calc(100% - 200px);
     float: left;
     color: rgba(255, 255, 255, 0.7);
     padding-left: 20px;
     background-color: #166d3b;
     background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+    overflow-y: auto;
 }
 
 #nav ul {
@@ -145,15 +147,50 @@ main {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    overflow: hidden;
 }
 
 /* -------PLAYER------- */
 footer {
     height: 100px;
     width: 100%;
-    background: violet;
+    background: #181818;
     float: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tape {
+    width: 15%;
+    height: 100%;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.fa-heart{
+    order: 3;
+    justify-content: flex-end;
+}
+
+#tape img {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+}
+
+
+
+#player {
+    width: 60%;
+    height: 100%;
+    background-color: yellow;
+}
+
+#volume {
+    width: 20%;
+    height: 100%;
+    background-color: green;
 }
 
 /* IDEA: media queryy non dimenticaree */
