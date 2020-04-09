@@ -37,13 +37,21 @@ a {
 
 #logo img, #logo-xs {
     padding-top: 20px;
-    width: 150px;
     height: auto;
     object-fit: contain;
     text-align: center;
     padding-bottom: 15px;
     padding-left: 15px;
     cursor: pointer;
+}
+
+#logo img {
+    width: 150px;
+}
+
+#logo-xs {
+    width: 60px;
+    padding-left: 15px;
 }
 
 .icon {
@@ -109,7 +117,7 @@ main {
     color: rgba(255, 255, 255, 0.7);
     padding-left: 20px;
     background-color: #000000;
-background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
     overflow-y: auto;
 }
 
@@ -260,29 +268,51 @@ footer {
 }
 
 /* IDEA: media queryy non dimenticaree */
-@media screen and (min-width: 992px){
-    .hidden-lg {
+
+
+@media screen and (max-width: 767px){
+    .hidden-xs {
         display: none;
     }
-    .show-lg {
+    .show-xs {
         display: block;
     }
+    #aside-bar {
+        width: 100px;
+    }
+    #aside-bar p, #aside-bar h5 {
+        display: none;
+    }
+    #install {
+        border-bottom: 0;
+    }
+    .icon {
+        padding-left: 30px;
+    }
+    .icon:nth-of-type(2) {
+        padding-left: 27px;
+    }
+
+
+
 
 }
-@media screen and (min-width: 768px){
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+
     .hidden-md {
         display: none;
     }
     .show-md {
         display: block;
     }
-
 }
-@media screen and (min-width: 600px){
-    .hidden-xs {
+
+@media screen and (min-width: 992px){
+    .hidden-lg {
         display: none;
     }
-    .show-xs {
+    .show-lg {
         display: block;
     }
 
