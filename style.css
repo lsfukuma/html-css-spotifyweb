@@ -15,6 +15,14 @@ a {
     text-decoration: none;
 }
 
+.hidden-lg, .hidden-md , .hidden-xs {
+    display: none;
+}
+
+.show-lg , .show-md , .show-xs {
+    display: block;
+}
+
 
 /* ----inizio asidebar------- */
 #aside-bar {
@@ -27,7 +35,7 @@ a {
     position: relative;
 }
 
-#logo img {
+#logo img, #logo-xs {
     padding-top: 20px;
     width: 150px;
     height: auto;
@@ -100,8 +108,8 @@ main {
     float: left;
     color: rgba(255, 255, 255, 0.7);
     padding-left: 20px;
-    background-color: #166d3b;
-    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+    background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
     overflow-y: auto;
 }
 
@@ -252,3 +260,30 @@ footer {
 }
 
 /* IDEA: media queryy non dimenticaree */
+@media screen and (min-width: 992px){
+    .hidden-lg {
+        display: none;
+    }
+    .show-lg {
+        display: block;
+    }
+
+}
+@media screen and (min-width: 768px){
+    .hidden-md {
+        display: none;
+    }
+    .show-md {
+        display: block;
+    }
+
+}
+@media screen and (min-width: 600px){
+    .hidden-xs {
+        display: none;
+    }
+    .show-xs {
+        display: block;
+    }
+
+}
