@@ -69,7 +69,7 @@ a {
 }
 
 .last-played {
-    padding: 20px 0 15px 15px;
+    padding: 10px 0 15px 15px;
     cursor: pointer;
 }
 
@@ -80,8 +80,8 @@ a {
 #menu-bottom {
     padding-left: 25px;
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 5px;
+    left: 5px;
     cursor: pointer;
 }
 
@@ -102,7 +102,9 @@ a {
     font-weight: bold;
 }
 
-
+.brani {
+    margin-bottom: 10px;
+}
 
 
 /* IDEA: main */
@@ -163,8 +165,8 @@ main {
     font-size: 18px;
     font-weight: bold;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    margin-top: 15px;
-    padding-bottom: 5px;
+    margin-top: 30px;
+    padding-bottom: 15px;
 }
 
 .brani img {
@@ -175,7 +177,7 @@ main {
     position: relative;
 }
 
-.brani img::before:hover {
+.brani img::before{
     content: '';
     position: absolute;
     top: 0;
@@ -190,7 +192,7 @@ main {
     text-align: left;
 }
 
-#perte , #suggerimenti {
+#perte , #suggerimenti, #madeforyou {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -348,8 +350,8 @@ footer {
     main {
         width: calc(100% - 100px);
     }
-    #player-ranger , #player-top {
-        width: 100%;
+    #player-top  {
+        padding-left: 20px;
     }
 }
 
