@@ -172,6 +172,17 @@ main {
     max-width: 200px;
     object-fit: contain;
     margin-top: 15px;
+    position: relative;
+}
+
+.brani img::before:hover {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .brani p, small {
@@ -198,7 +209,7 @@ footer {
 }
 
 #tape {
-    width: 20%;
+    width: 10%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -222,6 +233,11 @@ footer {
 .fa-heart{
     padding-left: 20px;
     padding-top: 5px;
+    color: pink;
+}
+
+#heart-player i:hover{
+    background-color:red;
 }
 
 #tape img {
@@ -241,25 +257,32 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #player-top i {
-    font-size: 20px;
-    padding: 30px;
+    font-size: 25px;
+    padding: 20px;
 }
 
-.fa-play {
+.fa-pause-circle {
+    color: white;
+}
+
+#player-top .fa-pause-circle i:hover{
+    box-shadow: 0 0 0 0 rgba(255,255,255,0);
+    color: #fff;
+}
+/*   .fa-pause {
     border-radius: 100%;
     border: 1px solid white;
     height: 5px;
     width: 5px;
-    text-align: left;
-    line-height: 3px;
+    text-align: center;
+    line-height: 5px;
     сolor: white;
     font-size:
 
-}
+}*/
 
 #ranger {
     display: flex;
@@ -267,14 +290,21 @@ footer {
     align-items: center;
 }
 
+#ranger span {
+    font-size: 12px;
+    font-weight: lighter;
+    padding: 0 5px 0 5px;
+}
+
+/* IDEA: hoover range */
+
 #player-ranger {
     width: 60%;
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-
 #volume {
-    width: 20%;
+    width: 10%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -285,6 +315,7 @@ footer {
     padding: 10px;
     font-size: 15px;
 }
+
 
 /* IDEA: media queryy non dimenticaree */
 
@@ -317,6 +348,9 @@ footer {
     main {
         width: calc(100% - 100px);
     }
+    #player-ranger , #player-top {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){
@@ -328,6 +362,13 @@ footer {
     }
     #nav {
         display: none;
+    }
+    #player-ranger {
+        width: 100%;
+    }
+    #volume i, #volume input {
+        padding: 5px;
+        font-size: 10px;
     }
 }
 
