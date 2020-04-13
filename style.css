@@ -298,14 +298,42 @@ footer {
     padding: 0 5px 0 5px;
 }
 
-/* IDEA: hoover range */
+ /*  .slider:hover {
+    background-color: #1AB26B;
+} */
 
-#player-ranger {
-    width: 60%;
-    background-color: rgba(255, 255, 255, 0.6);
+.slider{
+    -webkit-appearance: none;
+    height: 3px;
+    background: linear-gradient(90deg, rgb(26, 178, 107) 15%, rgb(214, 214, 214) 80%);
+    outline: none;
+    border-radius: 12px;
+    position: relative;
 }
 
-#volume {
+#slider-player {
+    width: 60%;
+}
+
+.slider::-moz-range-thumb { /* per firefox*/
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.slider::webkit-slider-thumb { /* per chrome */
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#volume, #volume-range {
     width: 10%;
     height: 100%;
     display: flex;
@@ -313,13 +341,13 @@ footer {
     align-items: center;
 }
 
-#volume i, #volume input {
+#volume i, #volume-range input {
     padding: 10px;
     font-size: 15px;
 }
 
 
-/* IDEA: media queryy non dimenticaree */
+/* ---media query----- */
 
 
 @media screen and (max-width: 767px){
@@ -381,5 +409,4 @@ footer {
     .show-lg {
         display: block;
     }
-
 }
