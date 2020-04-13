@@ -167,24 +167,49 @@ main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     margin-top: 30px;
     padding-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .brani img {
     max-height: 200px;
     max-width: 200px;
-    object-fit: contain;
     margin-top: 15px;
-    position: relative;
+    object-fit: contain;
 }
 
-.brani img::before{
+.brani {
+    position: relative;
+    cursor: pointer;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.brani::before{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
     background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+}
+
+.brani::after {
+    content: '\f04b';
+    font-family: "FontAwesome";
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.brani:hover::before , .brani:hover::after {
+    visibility: visible;
 }
 
 .brani p, small {
@@ -270,22 +295,6 @@ footer {
     color: white;
 }
 
-#player-top .fa-pause-circle i:hover{
-    box-shadow: 0 0 0 0 rgba(255,255,255,0);
-    color: #fff;
-}
-/*   .fa-pause {
-    border-radius: 100%;
-    border: 1px solid white;
-    height: 5px;
-    width: 5px;
-    text-align: center;
-    line-height: 5px;
-    сolor: white;
-    font-size:
-
-}*/
-
 #ranger {
     display: flex;
     justify-content: center;
@@ -298,17 +307,16 @@ footer {
     padding: 0 5px 0 5px;
 }
 
- /*  .slider:hover {
+.slider:hover {
     background-color: #1AB26B;
-} */
+}
 
 .slider{
     -webkit-appearance: none;
     height: 3px;
-    background: linear-gradient(90deg, rgb(26, 178, 107) 15%, rgb(214, 214, 214) 80%);
+    background: linear-gradient(90deg, rgb(26, 178, 107) 40%, rgb(214, 214, 214) 80%);
     outline: none;
     border-radius: 12px;
-    position: relative;
 }
 
 #slider-player {
@@ -341,9 +349,10 @@ footer {
     align-items: center;
 }
 
-#volume i, #volume-range input {
+#volume i {
     padding: 10px;
     font-size: 15px;
+
 }
 
 
