@@ -5,12 +5,6 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.clearfix {
-    content: '';
-    display: table;
-    clear: both;
-}
-
 a {
     text-decoration: none;
 }
@@ -102,11 +96,6 @@ a {
     font-weight: bold;
 }
 
-.brani {
-    margin-bottom: 10px;
-}
-
-
 /* IDEA: main */
 main {
     height: calc(100vh - 100px);
@@ -182,6 +171,7 @@ main {
     cursor: pointer;
     max-height: 200px;
     max-width: 200px;
+    margin-bottom: 70px
 }
 
 .brani::before{
@@ -230,13 +220,12 @@ footer {
     width: 100%;
     background: #181818;
     color: rgba(255, 255, 255, 0.6);
-    float: left;
     display: flex;
     justify-content: space-between;
 }
 
 #tape {
-    width: 10%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -261,10 +250,6 @@ footer {
     padding-left: 20px;
     padding-top: 5px;
     color: pink;
-}
-
-#heart-player i:hover{
-    background-color:red;
 }
 
 #tape img {
@@ -314,7 +299,7 @@ footer {
 .slider{
     -webkit-appearance: none;
     height: 3px;
-    background: linear-gradient(90deg, rgb(26, 178, 107) 40%, rgb(214, 214, 214) 80%);
+    background:rgba(255, 255, 255, 0.6);
     outline: none;
     border-radius: 12px;
 }
@@ -352,7 +337,6 @@ footer {
 #volume i {
     padding: 10px;
     font-size: 15px;
-
 }
 
 
@@ -405,7 +389,7 @@ footer {
     #player-ranger {
         width: 100%;
     }
-    #volume i, #volume input {
+    #volume i{
         padding: 5px;
         font-size: 10px;
     }
